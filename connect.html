@@ -24,6 +24,7 @@
     <![endif]-->
 
     <script src="assets/js/modernizr.custom.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js?render=6LcHIYcUAAAAAPnqH0iBwnDeFma0mWAMJKJHAoEO'></script>
 
 </head>
 <body class="cssAnimate ptn13 ct--pageVariation ct-navbarMobile--sticky">
@@ -174,32 +175,39 @@
             </div>
             <h3 class="ct-u-font1 text-uppercase text-center">drop us a line</h3>
             <hr class="hr-custom ct-js-background" data-bg="assets/images/hr2.png" data-bgrepeat="no-repeat">
-            <form role="form" action="assets/form/send.php" method="post" class="contactForm validateIt ct-u-paddingTop10" data-email-subject="Contact Form" data-show-errors="true">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <input id="contact_name" placeholder="Your name" required type="text" name="field[]" class="form-control input-lg">
-                            </div>
-                        </div>
-                    </div>
+            <form role="form" id="contactform" action="https://door.taolearning.org/api/form" method="post" class="contactForm validateIt ct-u-paddingTop10" data-email-subject="Contact Form" data-show-errors="true">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <input id="contact_email" placeholder="Email address" required type="email" name="field[]" class="form-control input-lg">
+                            <input id="contact_name" placeholder="Your name"  type="text" name="name" class="form-control input-lg">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input id="contact_email" placeholder="Email address"  type="email" name="email" class="form-control input-lg">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="form-group">
-                            <textarea id="contact_message" placeholder="Message" class="form-control input-lg" rows="8" name="field[]" required></textarea>
+                            <textarea id="contact_message" placeholder="Message" class="form-control input-lg" rows="8" name="message" ></textarea>
                         </div>
                     </div>
                 </div>
+                <input type="text" name="_gotcha" style="display:none" />
+                <input type="hidden" name="website" value="https://bistro125.com/" />
+                <input type="hidden" name="pageName" value="contact" />
+                <input type="hidden" name="test" value="off">
+                <input type="hidden" name="owner" value="1fbe138f-30f2-e911-a972-000d3a34e213">
+                <input type="hidden" name="token" value="">
+                <input type="hidden" name="formType" value="inquiry">     
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="form-group">
-                            <input type="submit" class="btn btn-lg btn-block btn-button--dark" value="send message">
+                            <button type="submit" class="btn btn-lg btn-block btn-button--dark" value="send message">send message</button>
                         </div>
                     </div>
                 </div>
@@ -236,7 +244,10 @@
 <script src="assets/js/jQueryShopLocator/init.js"></script>
 <!--<script src="assets/js/gmaps/gmap3.min.js"></script>-->
 <!--<script src="assets/js/gmaps/init.js"></script>-->
-<script src="assets/form/js/contact-form.js"></script>
+<!-- <script src="assets/form/js/contact-form.js"></script> -->
+<script src="assets/js/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="assets/js/validate.min.js"></script>
+<script src='assets/js/custom.contact.validate.js'></script>
 <script src="assets/twitter/js/jquery.tweet.js"></script>
 
 
