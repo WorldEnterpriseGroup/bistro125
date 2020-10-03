@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <br>
-  <img src="https://github.com/TaoFruit/bistro125/blob/gh-pages/assets/images/content/logo.png" alt="Bistro125" width="500" style="background-color:black;">
+  <img src="https://github.com/TaoFruit/bistro125/blob/gh-pages/assets/images/content/menu-3-waffles.jpg" alt="Bistro125" width="500" style="background-color: #000;">
 </h1>
 
 
