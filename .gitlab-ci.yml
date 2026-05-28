@@ -5,3 +5,7 @@ include:
 variables:
   GITHUB_REPO: "WorldEnterpriseGroup/bistro125"
   SITE_DIR: "."
+  # Trim unreferenced Revolution Slider vendor demo assets (~237MB) from the
+  # published artifact before it is copied into public/. Zero references from
+  # any html/css/js; site content preserved in the repo. Keeps Pages under 100MB.
+  BUILD_COMMANDS: "rm -rf include/rs-plugin/demos"
